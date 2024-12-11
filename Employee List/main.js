@@ -2,7 +2,6 @@ const myForm = document.querySelector('#my-form');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const container = document.querySelector('.container');
-// let table;
 
 myForm.addEventListener('submit', onSubmit);
 
@@ -54,25 +53,13 @@ function onSubmit(e) {
     // emailInput.value = '';
 
 
-    const table = document.createElement('table');
-    table.innerHTML += `
-        <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>${nameInput.value}</td>
-                <td>${emailInput.value}</td>
-            </tr>
-        </tbody>
-        </table>
+    const tbody = document.querySelector('#employees');
+    tbody.innerHTML += `
+        <tr>
+            <td>${nameInput.value}</td>
+            <td>${emailInput.value}</td>
+        </tr>
     `;
-
-    container.appendChild(table);
 
     nameInput.value = '';
     emailInput.value = '';
