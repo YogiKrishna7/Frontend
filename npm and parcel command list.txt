@@ -1,0 +1,33 @@
+1) npm install -D parcel or npm install --save-dev parcel
+
+2) npm install react
+
+3) npm install react-dom
+
+4) npm init
+
+(After init)
+
+5) npx parcel index.html (to run the App)
+
+6) npx parcel build index.html (in some cases, we have to remove the key "main" from json file, mainly when you are developing a module/library)
+
+7) npx http-server dist (to serve the production app locally)
+
+8)Optional: 
+Add Scripts to package.json (Optional): To simplify these commands, you can add them as scripts in your package.json:
+"scripts": {
+  "start": "parcel index.html",
+  "build": "parcel build index.html",
+  "serve": "http-server dist" (Optional)
+}
+
+we can run the script, by using the key like start:
+npm run start / npm run start / npm run serve etc.
+
+9) To view on mobile etc via a QRcode:
+Generate a QR Code for Easy Mobile Access (Optional): If you'd like to open the app on your phone without typing the URL:
+npx qrcode-terminal http://<your-local-ip>:8080
+
+10)Clean Parcel Cache (If Needed): If you run into issues, clear the Parcel cache:
+npx parcel clean
