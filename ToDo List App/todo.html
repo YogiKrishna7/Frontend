@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>My Todo App</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>TO DO ITEM:</td>
+            <td><input id="todoText" type="text" /></td>
+        </tr>
+        <tr>
+            <td>Priority:</td>
+            <td><select id="todoPriority">
+                    <option>HIGH</option>
+                    <option>MEDIUM</option>
+                    <option>LOW</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td><input id="todoDate" type="date" /></td>
+        </tr>
+    </table>
+
+    <button id="addTodoListBtn" onclick="addToDoItemToList();">ADD TO-DO ITEM</button>
+
+    <div id="todoListDiv">
+        <table id="todoTab"></table>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
