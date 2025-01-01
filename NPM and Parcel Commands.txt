@@ -1,12 +1,10 @@
-1) npm install -D parcel or npm install --save-dev parcel
+1) npm init
 
-2) npm install react
+2) npm install -D parcel or npm install --save-dev parcel
 
-3) npm install react-dom
+3) npm install react
 
-4) npm init
-
-(After init)
+4) npm install react-dom
 
 5) npx parcel index.html (to run the App)
 
