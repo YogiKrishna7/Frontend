@@ -133,8 +133,45 @@ the function that is passed a an parameter is executed next */
 // }
 
 /* 
-Callback hell/pyramid problem: 
+Callback hell/pyramid of doom: 
 A situation in JS where callbacks are nested within other callbacks to the extend where the code is difficult to read.
 Its an old way to work with asynchronous functions.
 Use promises + async/await to avoid callback hell
 */
+
+// function task1(callback) {
+//     setTimeout(() => {
+//         console.log("Task 1 complete");
+//         callback();
+//     }, 2000);
+// }
+// function task2(callback) {
+//     setTimeout(() => {
+//         console.log("Task 2 complete");
+//         callback();
+//     }, 1000);
+
+// }
+// function task3(callback) {
+//     setTimeout(() => {
+//         console.log("Task 3 complete");
+//         callback();
+//     }, 3000);
+
+// }
+// function task4(callback) {
+//     setTimeout(() => {
+//         console.log("Task 4 complete");
+//         callback();
+//     }, 1700);
+// }
+
+// task1(() => {
+//     task2(()=>{
+//         task3(() => {
+//             task4(() => {
+//                 console.log("ALL TASKS ARE COMPLETE");
+//             });
+//         });
+//     });
+// });

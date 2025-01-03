@@ -27,7 +27,6 @@
 // console.log("7" == 7);
 // console.log("7" === 7);
 
-
 // /* Logical Operators */
 
 // let x = 7, y = 8, z = 9;
@@ -49,14 +48,14 @@
 // let num2 = 9;
 // let num3 = 7;
 
-// if(num1 % 2 == 0){
+// if (num1 % 2 == 0) {
 //     console.log(`${num1} is even`);
 
-// }else if(num2 % 2 == 0){
+// } else if (num2 % 2 == 0) {
 //     console.log(`${num2} is even`);
 
 // }
-// else if(num3 % 2 == 0){
+// else if (num3 % 2 == 0) {
 //     console.log(`${num3} is even`);
 // }
 
@@ -64,7 +63,7 @@
 // let i = 10;
 // let res;
 
-// res = i%2===0 ? "even" : "odd"
+// res = i % 2 === 0 ? "even" : "odd"
 // console.log(res);
 
 // /* Basically to run a statement multiple times, we use loops*/
@@ -92,7 +91,7 @@
 // }
 
 // /* Nested Loops */
-// for(i = 1; i<=5; i++){
+// for (i = 1; i <= 5; i++) {
 //     console.log("Hi");
 //     for (let j = 0; j <= 5; j++) {
 //         console.log("Hello");
@@ -106,7 +105,7 @@
 // let lastDigit;
 // let num2 = 0;
 
-// while(num > 0){
+// while (num > 0) {
 //     lastDigit = num % 10;
 //     num2 = num2 * 10 + lastDigit;
 //     num = parseInt(num / 10);
@@ -257,8 +256,54 @@
 
 // laptop.greet();
 
-// /* Arrow Functions */
-// let y = () => 2 + 2;
+// /* Function Exprssions vs declaration: 
+// function declaration = define a reusable block of code that performs a specifc task.*/
+
+// function hello() {
+//     console.log("Hello");
+// }
+
+// /*function expression = a way to define a function as values or variables.*/
+
+// const hey = function () {
+//     console.log("Hello World");
+// }
+
+// /* and to invoke/ call it we use*/
+// hey();
+
+// /* using JS we also have the ability to pass a function as a value, for this example we will use*/
+// setTimeout(hey, 3000);
+
+// /* Now instead of doing like this, we will write whole function as an argument, 
+// in JS its ligal to pass an entire function as an argument */
+
+// setTimeout(function () {
+//     console.log("hello world");
+
+// }, 3000);
+
+// /* 
+// Arrow Functions: a concise way to write function expressions,
+// good for simple functions that you use only once,
+// no need of function declaration
+
+// (parameters) => some code
+// */
+
+// /* Example 1: */
+// const hello = (name, age) => {console.log(`Hello ${name}`)
+//                               console.log(`You are ${age} years old`)};
+   
+// hello("Bro", 25);
+  
+// /* Example 2: */
+// setTimeout(() => {console.log("Hello"); 
+//                   console.log("Goodbye");}, 3000);
+
+// const hello = (name, age) => {
+//     console.log(`Hello ${name}, You are ${age} years old`);
+// }
 
 // /* This keyword to get the current object's property, we can use this keyword or instead we can use the object and the property name but that would get confused if we have many objects etc*/
 // let phone = {
@@ -341,7 +386,7 @@
 //     console.log(n);
 // }
 
-// /* Spreading */
+// /* Spread operator */
 // let a1 = [1, 2, 3]
 // let a2 = [4, 5, 6]
 // let a3 = [...a1, ...a2];
@@ -522,7 +567,7 @@ FOR HIGHER ORDER ARRAY METHODS LIKE forEach, map, filter and reduce, WILL PROVID
 and apply a specified function to each element, modifies the array
 
 array.forEach(callback)
-element, index and array parameters are provided automatically with forEach method, 
+element, index and array parameters are provided automatically with forEach method,
 
 behind the scenes the foreach method will provide to a callback, an element, index and array argument,
 an element for the current element that we are on when looping through the array
@@ -585,7 +630,8 @@ and the location of the array itself
 /*
 .map(), accepts a callback and applies that function to each element of the array,
 then returns a new array other than that its very similar to forEach
-element, index and array parameters are provided automatically with map method
+element, index and array parameters are provided automatically with map method,
+here we will use function expression for clarity
 */
 
 /* Example 1: */
@@ -593,7 +639,12 @@ element, index and array parameters are provided automatically with map method
 // const numbers = [1, 2, 3, 4, 5];
 
 // const squares = numbers.map(square);
-// const cubes = numbers.map(cube);
+
+/* Example for function expression here */
+// const cubes = numbers.map(function (element) {
+//     return Math.pow(element, 3)
+// }
+// );
 
 // console.log(squares);
 // console.log(cubes);
@@ -602,9 +653,6 @@ element, index and array parameters are provided automatically with map method
 //     return Math.pow(element, 2)
 // }
 
-// function cube(element) {
-//     return Math.pow(element, 3)
-// }
 
 /* Example 2: */
 // const Students = ["SpongeBob", "Patrick", "Sandy", "Squidward", "MrKrabs"];
@@ -727,3 +775,20 @@ element, index and array parameters are provided automatically with map method
 //     return Math.min(accumulator, element);
 // }
 
+
+
+/* All the Higher Array methods with arrow functions to understand more clearly */             
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const squares = numbers.map((element) => Math.pow(element, 2));
+const cubes = numbers.map((element) => Math.pow(element, 3));
+const evenNums = numbers.filter((element) => element % 2 === 0);
+const oddNums = numbers.filter((element) => element % 2 !== 0);
+const total = numbers.reduce((accumulator, element) => accumulator + element);
+
+console.log(numbers);
+console.log(squares);
+console.log(cubes);
+console.log(evenNums);
+console.log(oddNums);
+console.log(total);
