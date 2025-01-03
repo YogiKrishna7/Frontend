@@ -560,22 +560,22 @@
 
 // console.log(fm);
 
-/*
-FOR HIGHER ORDER ARRAY METHODS LIKE forEach, map, filter and reduce, WILL PROVIDE THE element, index and array ARGUMENTS TO CALLBACK FUNCRION.
+// /*
+// FOR HIGHER ORDER ARRAY METHODS LIKE forEach, map, filter and reduce, WILL PROVIDE THE element, index and array ARGUMENTS TO CALLBACK FUNCRION.
 
-.forEach() is a method used to iterate over the elements of an array
-and apply a specified function to each element, modifies the array
+// .forEach() is a method used to iterate over the elements of an array
+// and apply a specified function to each element, modifies the array
 
-array.forEach(callback)
-element, index and array parameters are provided automatically with forEach method,
+// array.forEach(callback)
+// element, index and array parameters are provided automatically with forEach method,
 
-behind the scenes the foreach method will provide to a callback, an element, index and array argument,
-an element for the current element that we are on when looping through the array
-an index that keeps track of the current index number
-and the location of the array itself
-*/
+// behind the scenes the foreach method will provide to a callback, an element, index and array argument,
+// an element for the current element that we are on when looping through the array
+// an index that keeps track of the current index number
+// and the location of the array itself
+// */
 
-/* Example 1: */
+// /* Example 1: */
 // let numbers = [1,2,3,4,5,6,7];
 
 // numbers.forEach(cube);
@@ -604,7 +604,7 @@ and the location of the array itself
 //     console.log(element);
 // }
 
-/* Example 2: */
+// /* Example 2: */
 
 // let fruits = ["apple", "orange", "grapes", "banana"];
 
@@ -627,20 +627,20 @@ and the location of the array itself
 //     console.log(element);
 // }
 
-/*
-.map(), accepts a callback and applies that function to each element of the array,
-then returns a new array other than that its very similar to forEach
-element, index and array parameters are provided automatically with map method,
-here we will use function expression for clarity
-*/
+// /*
+// .map(), accepts a callback and applies that function to each element of the array,
+// then returns a new array other than that its very similar to forEach
+// element, index and array parameters are provided automatically with map method,
+// here we will use function expression for clarity
+// */
 
-/* Example 1: */
+// /* Example 1: */
 
 // const numbers = [1, 2, 3, 4, 5];
 
 // const squares = numbers.map(square);
 
-/* Example for function expression here */
+// /* Example for function expression here */
 // const cubes = numbers.map(function (element) {
 //     return Math.pow(element, 3)
 // }
@@ -654,7 +654,7 @@ here we will use function expression for clarity
 // }
 
 
-/* Example 2: */
+// /* Example 2: */
 // const Students = ["SpongeBob", "Patrick", "Sandy", "Squidward", "MrKrabs"];
 
 // const StudentUpperCased = Students.map(upperCase);
@@ -671,7 +671,7 @@ here we will use function expression for clarity
 //     return element.toLowerCase();
 // }
 
-/* Example 3: */
+// /* Example 3: */
 // const dates = ["2024-12-30", "2025-12-29", "2026-12-28", "2027-12-27"];
 
 // const formatedDates = dates.map(formateDates);
@@ -682,9 +682,9 @@ here we will use function expression for clarity
 //     return `${parts[2]}/${parts[1]}/${parts[0]}`;
 // }
 
-/* Filter, creates a new array by filtering out the elements */
+// /* Filter, creates a new array by filtering out the elements */
 
-/* Example 1: */
+// /* Example 1: */
 // let numbers = [1,2,3,4,5,6,7,8,9];
 
 // let evenNums = numbers.filter(isEven);
@@ -702,7 +702,7 @@ here we will use function expression for clarity
 //     return element % 2 !== 0;
 // }
 
-/* Example 2: */
+// /* Example 2: */
 // let ages = [16, 17, 18, 18, 19, 20, 60];
 
 // let adults = ages.filter(isAdult);
@@ -719,7 +719,7 @@ here we will use function expression for clarity
 //     return element < 18;
 // }
 
-/* Example 3: */
+// /* Example 3: */
 // const words = ["apple", "orange", "banana", "kiwi", "papaya", "coconut"];
 
 // let shortWords = words.filter(getShortWords);
@@ -736,9 +736,9 @@ here we will use function expression for clarity
 //     return element.length >= 6;
 // }
 
-/* .reduce(), reduces the elements of an array into an single value */
+// /* .reduce(), reduces the elements of an array into an single value */
 
-/* Example 1: */
+// /* Example 1: */
 // const prices = [5, 30, 10, 30, 50, 37, 70];
 
 // const total = prices.reduce(sum);
@@ -758,7 +758,7 @@ here we will use function expression for clarity
 // /* Meaning during the 1st iteration, the previous would be 0 and next would be 5
 // and the result would be the previous and the next element would be 30 */
 
-/* Example 2: */
+// /* Example 2: */
 // const grades = [75, 50, 90, 80, 65, 95];
 
 // const max = grades.reduce(getMax);
@@ -774,8 +774,6 @@ here we will use function expression for clarity
 // function getMin(accumulator, element){
 //     return Math.min(accumulator, element);
 // }
-
-
 
 /* All the Higher Array methods with arrow functions to understand more clearly */             
 const numbers = [1, 2, 3, 4, 5, 6];
