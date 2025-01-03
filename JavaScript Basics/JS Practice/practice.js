@@ -514,3 +514,216 @@
 // });
 
 // console.log(fm);
+
+/*
+FOR HIGHER ORDER ARRAY METHODS LIKE forEach, map, filter and reduce, WILL PROVIDE THE element, index and array ARGUMENTS TO CALLBACK FUNCRION.
+
+.forEach() is a method used to iterate over the elements of an array
+and apply a specified function to each element, modifies the array
+
+array.forEach(callback)
+element, index and array parameters are provided automatically with forEach method, 
+
+behind the scenes the foreach method will provide to a callback, an element, index and array argument,
+an element for the current element that we are on when looping through the array
+an index that keeps track of the current index number
+and the location of the array itself
+*/
+
+/* Example 1: */
+// let numbers = [1,2,3,4,5,6,7];
+
+// numbers.forEach(cube);
+// numbers.forEach(square);
+// numbers.forEach(triple);
+// numbers.forEach(double);
+// numbers.forEach(display);
+
+// function double(element, index, array){
+//     array[index] = element * 2;
+// }
+
+// function triple(element, index, array){
+//     array[index] = element * 3;
+// }
+
+// function square(element, index, array){
+//     array[index] = Math.pow(element, 2);
+// }
+
+// function cube(element, index, array){
+//     array[index] = Math.pow(element, 3);
+// }
+
+// function display(element){
+//     console.log(element);
+// }
+
+/* Example 2: */
+
+// let fruits = ["apple", "orange", "grapes", "banana"];
+
+// fruits.forEach(capitalize);
+// fruits.forEach(display); // here the parameter for the display function, meaning the fruit element will be passed automatically
+
+// function upperCase(element, index, array) {
+//     array[index] = element.toUpperCase(); // methods belong to somthing, like here the method belong to the element and functions are standalone
+// }
+
+// function lowerCase(element, index, array) {
+//     array[index] = element.toLowerCase();
+// }
+
+// function capitalize(element, index, array) {
+//     array[index] = element.charAt(0).toUpperCase() + element.slice(1); // this is method chaining
+// }
+
+// function display(element) {
+//     console.log(element);
+// }
+
+/*
+.map(), accepts a callback and applies that function to each element of the array,
+then returns a new array other than that its very similar to forEach
+element, index and array parameters are provided automatically with map method
+*/
+
+/* Example 1: */
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const squares = numbers.map(square);
+// const cubes = numbers.map(cube);
+
+// console.log(squares);
+// console.log(cubes);
+
+// function square(element) {
+//     return Math.pow(element, 2)
+// }
+
+// function cube(element) {
+//     return Math.pow(element, 3)
+// }
+
+/* Example 2: */
+// const Students = ["SpongeBob", "Patrick", "Sandy", "Squidward", "MrKrabs"];
+
+// const StudentUpperCased = Students.map(upperCase);
+// const StudentLowerCased = Students.map(lowerCase);
+
+// console.log(StudentUpperCased);
+// console.log(StudentLowerCased);
+
+
+// function upperCase(element){
+//     return element.toUpperCase();
+// }
+// function lowerCase(element){
+//     return element.toLowerCase();
+// }
+
+/* Example 3: */
+// const dates = ["2024-12-30", "2025-12-29", "2026-12-28", "2027-12-27"];
+
+// const formatedDates = dates.map(formateDates);
+// console.log(formatedDates);
+
+// function formateDates(element){
+//     const parts = element.split("-");
+//     return `${parts[2]}/${parts[1]}/${parts[0]}`;
+// }
+
+/* Filter, creates a new array by filtering out the elements */
+
+/* Example 1: */
+// let numbers = [1,2,3,4,5,6,7,8,9];
+
+// let evenNums = numbers.filter(isEven);
+// let oddNums = numbers.filter(isOdd);
+
+// console.log(evenNums);
+// console.log(oddNums);
+
+
+// function isEven(element){
+//     return element % 2 === 0;
+// }
+
+// function isOdd(element){
+//     return element % 2 !== 0;
+// }
+
+/* Example 2: */
+// let ages = [16, 17, 18, 18, 19, 20, 60];
+
+// let adults = ages.filter(isAdult);
+// let children = ages.filter(isChild);
+
+// console.log(adults);
+// console.log(children);
+
+// function isAdult(element){
+//     return element >= 18;
+// }
+
+// function isChild(element){
+//     return element < 18;
+// }
+
+/* Example 3: */
+// const words = ["apple", "orange", "banana", "kiwi", "papaya", "coconut"];
+
+// let shortWords = words.filter(getShortWords);
+// let longWords = words.filter(getLongWords);
+
+// console.log(shortWords);
+// console.log(longWords);
+
+// function getShortWords(element){
+//     return element.length <= 6;
+// }
+
+// function getLongWords(element){
+//     return element.length >= 6;
+// }
+
+/* .reduce(), reduces the elements of an array into an single value */
+
+/* Example 1: */
+// const prices = [5, 30, 10, 30, 50, 37, 70];
+
+// const total = prices.reduce(sum);
+
+// console.log(total);
+
+// /* Accumulator means like the first element, meaning to that element, every other elements get added to, this can be a little confusing so we can do simpler way*/
+// // function sum(accumulator, element){
+// //     return accumulator + element;
+// // }
+
+// /* Instead of accumulator etc, we gonna just use previous and next parameters */
+// function sum(previous, next){
+//     return previous + next;
+// }
+
+// /* Meaning during the 1st iteration, the previous would be 0 and next would be 5
+// and the result would be the previous and the next element would be 30 */
+
+/* Example 2: */
+// const grades = [75, 50, 90, 80, 65, 95];
+
+// const max = grades.reduce(getMax);
+// const min = grades.reduce(getMin);
+
+// console.log(max);
+// console.log(min);
+
+// function getMax(accumulator, element){
+//     return Math.max(accumulator, element);
+// }
+
+// function getMin(accumulator, element){
+//     return Math.min(accumulator, element);
+// }
+
