@@ -294,9 +294,9 @@
 // /* Example 1: */
 // const hello = (name, age) => {console.log(`Hello ${name}`)
 //                               console.log(`You are ${age} years old`)};
-   
+
 // hello("Bro", 25);
-  
+
 // /* Example 2: */
 // setTimeout(() => {console.log("Hello"); 
 //                   console.log("Goodbye");}, 3000);
@@ -340,7 +340,11 @@
 
 // w1.work();
 
-// /* Arrays in JS, in JS arrays can hold multiple types of data as elements */
+// /* Arrays in JS, in JS arrays can hold multiple types of data as elements 
+// Array constructor and without constructor 
+// */
+// const numbers = new Array(1,3,5,7);
+
 // let sampleArray = []; // Empty array
 // let sampleArray2 = [1, 2, 3] // Non empty array
 
@@ -775,7 +779,7 @@
 //     return Math.min(accumulator, element);
 // }
 
-/* All the Higher Array methods with arrow functions to understand more clearly */             
+/* All the Higher Array methods with arrow functions to understand more clearly */
 const numbers = [1, 2, 3, 4, 5, 6];
 
 const squares = numbers.map((element) => Math.pow(element, 2));
