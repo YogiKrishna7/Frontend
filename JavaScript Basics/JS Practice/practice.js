@@ -794,3 +794,33 @@ console.log(cubes);
 console.log(evenNums);
 console.log(oddNums);
 console.log(total);
+
+/* 
+Method chaining:
+Calling one method after another in one line of code,
+it helps in avoiding named variable, but the method chain is too long, it becomes difficult to read.
+*/
+
+let username = window.prompt("Enter your username");
+
+/* No method chaining */
+
+// username = username.trim();
+
+// let firstLetter = username.charAt(0);
+
+// firstLetter = firstLetter.toUpperCase();
+
+// let otherChars = username.slice(1);
+
+// otherChars = otherChars.toLowerCase();
+
+// username = firstLetter + otherChars;
+
+// console.log(username);
+
+/* With Method Chaining */
+
+username = username.trim().charAt(0).toUpperCase() + username.slice(1).toLowerCase();
+
+alert(username);
