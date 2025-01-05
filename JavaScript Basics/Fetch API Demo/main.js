@@ -9,9 +9,21 @@ so when we use fetch(), it returns a promise
 
 let promise = fetch(url, [options]);
 
+    url: The endpoint to which the request is made.
+    [options]: Optional configuration like HTTP method (GET, POST, etc.), headers, body, etc. If not, a GET request is made by default.
+
+An API endpoint is a digital location where an API receives requests for resources from a server.
+
+GET Request:
+GET is the default HTTP method used to retrieve data from a server or API. It is primarily used for fetching resources.
+
 if we dont pass any options, then the fetch api will use a type of request called GET request
 
 GET is used to get data from an api
+POST is used to insert data, and are used to create new details. 
+PATCH is used to update data, it requests only update the passed data. 
+PUT is used to create or update a resource.
+DELETE is used to remove data.
 
 */
 
@@ -45,6 +57,7 @@ so still gonna use the term AJAX even though XML is replaced with JSON.
 
 so in the above code the response is in JSON format,
 so to get the actual data, we need to convert the JSON to JS object to use in JS.
+It represents data as key-value pairs similar to JavaScript objects
 
 And for that we use json() method, and the method is also an Asynchronous method,
 so it returns a second promise that resolves with the result of parseing the response body as JSON.
