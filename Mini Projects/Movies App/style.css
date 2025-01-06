@@ -1,0 +1,159 @@
+/* Reset and General Styles */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #d5ae47;
+    --hover-color: #f4e8a3;
+    --background-color: #1a1a1a;
+    --border-radius: 7px;
+}
+
+/* Main Logo */
+#main-logo {
+    height: 100px;
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+/* Logo and Title Container */
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+/* Title Style */
+.main-title {
+    margin: 30px 30px 30px 5px;
+    color: var(--primary-color);
+    font-size: 1.5rem; /* Adjusted for better readability */
+}
+
+/* Header Container */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    height: 80px;
+    padding: 10px 30px;
+    border-bottom-right-radius: 5px ;
+    border-bottom-left-radius: 5px ;
+}
+
+/* Search Container */
+.main-search {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Search Bar */
+#search-bar {
+    border-radius: var(--border-radius);
+    height: 30px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    padding: 0 10px;
+    color: var(--primary-color);
+    background-color: #000;
+}
+
+/* Search Button */
+#search-btn{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    color: white;
+    height: 30px;
+    width: 70px;
+}
+
+/* Navigation List */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:focus, a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+/* Navigation Container */
+.main-nav {
+    padding: 10px 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-title {
+        margin-bottom: 20px;
+    }
+
+    #search-bar {
+        width: 100%;
+        max-width: none;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+.movie-card{
+
+    background-color: #1a1a1a;
+    color: white;
+    width: 25%;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.movie-card:hover{
+    border-color: #d5ae47;
+}
+
+.movie-card img{
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.mov-container{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
