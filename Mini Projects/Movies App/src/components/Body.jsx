@@ -1,15 +1,11 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-const Body = function ({ m }) {
-    if (!Array.isArray(m) || m.length === 0) {
-        return <div>No movies to display</div>;
-    }
-
+const Body = function ({ obj }) {
     return (
         <div className="body-div">
             <div className="mov-container">
-                {m.map((mov) => (
+                {obj.map((mov) => (
                     <MovieCard mov={mov} />
                 ))}
             </div>
